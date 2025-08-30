@@ -26,7 +26,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
-        // Add Swagger UI for each API version
+        // Add Swagger UI for each API version number
         var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
         foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions)
         {
@@ -39,3 +39,4 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+
